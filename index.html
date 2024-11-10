@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Landing Page TailwindCSS</title>
+</head>
+
+<body class="mt-10 ">
+   
+        <!-- Navigation Bar -->
+<nav id="nav" class="fixed top-0 left-0 z-50 w-full bg-white flex justify-around items-center px-4 py-2 shadow-md">
+    <!-- Logo -->
+    <div>
+        <img src="image/logo.png" alt="Logo" class="w-35 sm:w-50 md:w-35 lg:w-30 xl:w-35  cursor-pointer" id="pic">
+        <!-- Adjust width as needed -->
+    </div>
+
+    <!-- Hamburger Icon for Mobile (Hidden on lg screens) -->
+    <div class="lg:hidden ml-auto">
+        <button id="menu-btn" class="text-cyan-600 text-right cursor-pointer">
+            <i class="fas fa-bars text-4xl"></i> <!-- Test Hamburger Icon -->
+        </button>
+    </div>
+
+    <!-- Navigation Links (Hidden on mobile, visible on lg screens) -->
+    <div id="mymenu" class="hidden lg:flex text-cyan-600 space-x-12">
+        <ul class="flex space-x-12">
+            <li class="relative group hover:text-cyan-800 cursor-pointer">
+                <span ><a href="#about">About</a></span>
+                <span class="absolute left-0 right-0 bottom-0 h-0.5 bg-cyan-600 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+            </li>
+            <li class="relative group hover:text-cyan-800 cursor-pointer">
+                <span><a href="#features">Features</a></span>
+                <span class="absolute left-0 right-0 bottom-0 h-0.5 bg-cyan-600 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+            </li>
+            <li class="relative group hover:text-cyan-800 cursor-pointer">
+                <span><a href="#pricing">Pricing</a></span>
+                <span class="absolute left-0 right-0 bottom-0 h-0.5 bg-cyan-600 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+            </li>
+            <li class="relative group hover:text-cyan-800  cursor-pointer">
+                <span><a href="#network">Network</a></span>
+                <span class="absolute left-0 right-0 bottom-0 h-0.5 bg-cyan-600 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+            </li>
+            <li class="relative group hover:text-cyan-800 cursor-pointer">
+                <span><a href="#contact">Contact us</a></span>
+                <span class="absolute left-0 right-0  bottom-0 h-0.5 bg-cyan-600 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Sign In and Sign Up Buttons (Hidden on mobile, visible on lg screens) -->
+    <div class="hidden lg:flex space-x-4" id="btn">
+        <button  class=" px-6 py-2 text-cyan-600 cursor-pointer rounded-3xl   hover:bg-sky-600 hover:transition-colors duration-500 hover:rounded-3xl 
+        hover:text-white  " > Login in</button>
+        <button  class="border-2 border-cyan-600 rounded-3xl px-6 py-2 text-cyan-600 cursor-pointer " >Sign up</button>
+    </div>
+</nav>
+
+
+        <!-- Mobile Menu (Initially hidden, toggled on small screens) -->
+        <div id="mobile-menu" class="lg:hidden hidden flex-col  bg-sky-600   py-4 " id="menu-animation">
+            <ul class="space-y-4 text-white  flex flex-col items-center">
+                <li class="text-4xl cursor-pointer"><a href="#about">About</a></li>
+                <li class="text-4xl cursor-pointer"><a href="#features">Features</a></li>
+                <li class="text-4xl cursor-pointer"><a href="#pricing">Pricing</a></li>
+                <li class="text-4xl cursor-pointer"><a href="#network">Network</a></li>
+                <li class="text-4xl cursor-pointer"><a href="#contact">Contact us</a></li>
+            </ul>
+            <div class=" flex  flex-col mt-10">
+                <button class="bg-white border-2 border-cyan-600 h-14 rounded-3xl text-4xl  hover:border-none">Login</button>
+
+                <button class="bg-white border-2 border-cyan-600 h-14  rounded-3xl text-4xl   ">Sign up</button>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="flex flex-col md:flex-row justify-around items-center px-4 md:px-20 mt-14 h-auto md:h-96" id="about" >
+            <div class="flex-1 mb-6 md:mb-0" id="anim">
+                <h1 class="text-4xl md:text-4xl leading-normal font-mono md:text-left text-center">
+                    <span class="font-bold font-sans">Want anything to be</br> easy with</span> Net<span
+                        class="font-bold">ONE</span>.
+                </h1>
+                <p class="mt-5 text-base md:text-lg md:text-left text-center">
+                    Provide a network for all your needs with ease and
+                    using NetONE </br>discover interesting features from us.
+                </p>
+                <button class="bg-sky-600 text-white px-10 py-3 rounded-2xl mt-10 
+                 shadow-2xl shadow-cyan-600   md:mx-0 mx-32 md:text-3xl text-3xl">Get
+                    Started</button>
+            </div>
+            <div class="flex-1 flex justify-center" id="imganimation">
+                <img src="image/section.png" alt="section" class="h-72 w-auto max-w-full mt-10 md:mt-0">
+            </div>
+        </div>
+        <!-- section02 -->
+        <div id="featur"  class="flex flex-col md:flex-row w-11/12 md:w-8/12 mx-auto shadow-2xl shadow-gray-200 mt-14 space-y-5 md:space-y-0 md:space-x-5">
+            <!-- First item -->
+            <div class="w-full md:w-1/3 flex flex-row justify-center items-center space-x-3 border-b md:border-b-0 md:border-r-2 border-slate-300 h-auto md:h-24 p-4">
+                <div class="bg-slate-300 w-10 h-10 flex justify-center items-center border-2 rounded-full">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="flex justify-center flex-col">
+                    <div class="font-bold text-2xl sm:text-3xl md:text-4xl">90+</div>
+                    <div class="text-2xl sm:text-3xl md:text-3xl">Users</div>
+                </div>
+            </div>
+        
+            <!-- Second item -->
+            <div class="w-full md:w-1/3 flex flex-row justify-center items-center space-x-3 border-b md:border-b-0 md:border-r-2 border-slate-300 h-auto md:h-24 p-4">
+                <div class="bg-slate-300 w-10 h-10 flex justify-center items-center border-2 rounded-full">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <div class="flex justify-center flex-col">
+                    <div class="font-bold text-2xl sm:text-3xl md:text-4xl">30+</div>
+                    <div class="text-2xl sm:text-3xl md:text-3xl">Locations</div>
+                </div>
+            </div>
+        
+            <!-- Third item -->
+            <div class="w-full md:w-1/3 flex flex-row justify-center items-center space-x-3 h-auto md:h-24 p-4">
+                <div class="bg-slate-300 w-10 h-10 flex justify-center items-center border-2 rounded-full">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="flex justify-center flex-col">
+                    <div class="font-bold text-2xl sm:text-3xl md:text-4xl">50+</div>
+                    <div class="text-2xl sm:text-3xl md:text-3xl">Server</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- section  3 -->
+        <div class="flex flex-col md:flex-row mt-32 m-auto justify-center md:justify-between text-center md:text-right">
+            <!-- Image Container -->
+            <div class="w-full md:w-1/2 flex justify-center md:justify-start" id="animsection3">
+                <img src="image/section4.png" class="w-10/12 md:w-full">
+            </div>
+        
+            <!-- Text Container -->
+            <div class="w-full md:w-1/2 px-8 mt-8 md:mt-0" id="features" >
+                <h2 class="mt-8 font-bold text-4xl sm:text-lg text-center  ">We Provide Many <br>Features You Can Use</h2>
+                <p class="leading-relaxed mt-6 sm:text-lg text-center">You can explore the features that we provide with fun <br>and
+                    have their own
+                    functions each feature.</p>
+                <div class="mt-7 sm:text-lg">
+                    <p class="flex items-center">
+                        <img src="image/icon.png" alt="icon" class="w-6 h-6 mr-3">
+                        Powerfull online protection.
+                    </p>
+                    <p class="flex items-center">
+                        <img src="image/icon.png" alt="icon" class="w-6 h-6 mr-3">
+                        Internet without borders.
+                    </p>
+                    <p class="flex items-center">
+                        <img src="image/icon.png" alt="icon" class="w-6 h-6 mr-3">
+                        Supercharged NetONE
+                    </p>
+                    <p class="flex items-center">
+                        <img src="image/icon.png" alt="icon" class="w-6 h-6 mr-3">
+                        No specific time limits.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="bg-stone-50 mt-20 h-full flex-col md:flex-row" id="pricing">
+            <!-- Section Header 4 -->
+            <div class="pt-12">
+                <h1 class="text-center font-bold text-3xl mt-10">Choose Your Plan</h1>
+                <p class="text-center">Let's choose the package that is best for you and explore it happily and<br>
+                    cheerfully.</p>
+            </div>
+
+            <!-- Cards Container -->
+            <div class="flex flex-col md:flex-row md:justify-center px-14 space-y-8 md:space-y-0 md:space-x-8 mt-10">
+
+                <!-- Free Plan -->
+                <div
+                    class="w-full md:w-1/3 h-auto pt-10 px-10 py-10 bg-white border-2 border-gray-300 flex flex-col justify-between items-center rounded-md hover:border-3 hover:border-blue-400
+                    transition duration-200 ease-in-out transform md:hover:scale-110 ">
+                    <div class="flex flex-col items-center"> <!-- Centering the content -->
+                        <img src="image/pic.png" alt="Free Plan Image" class="mb-4">
+                        <!-- Added margin bottom for spacing -->
+                        <h2 class="font-bold">Free Plan</h2>
+                        <div class="space-y-3 mt-8 text-sky-700">
+                            <p><i class="fas fa-check px-4 text-sm text-green-500"></i>Unlimited Bandwidth</p>
+                            <p><i class="fas fa-check px-4 text-sm text-green-500"></i>Encrypted Connection</p>
+                            <p><i class="fas fa-check px-4 text-sm text-green-500"></i>No Traffic Logs</p>
+                            <p><i class="fas fa-check px-4 text-sm text-green-500"></i>Works on All Devices</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center text-center mt-14">
+                        <h1 class="mt-12 font-bold">Free</h1>
+                        <button
+                            class="border-2 border-sky-700 rounded-3xl px-16 py-2 mt-4 hover:bg-sky-600 hover:text-white">Select</button>
+                    </div>
+                </div>
+
+                <!-- Standard Plan -->
+                <div
+                    class="w-full md:w-1/3 h-auto pt-10 px-10 py-10 bg-white border-2 border-gray-300 flex flex-col justify-between items-center rounded-md hover:border-3 hover:border-blue-400 
+                    transition duration-200 ease-in-out transform md:hover:scale-110">
+                    <div class="flex flex-col items-center">
+                        <img src="image/pic.png" alt="Standard Plan Image" class="mb-4">
+                        <h2 class="font-bold">Standard Plan</h2>
+                        <div class="space-y-3 mt-8 text-sky-700">
+                            <p><i class="fas fa-check px-4 text-sm text-green-500 "></i>Unlimited Bandwidth</p>
+                            <p><i class="fas fa-check px-4 text-sm text-green-500"></i>Encrypted Connection</p>
+                            <p><i class="fas fa-check px-4 text-sm text-green-500"></i>Yes Traffic Logs</p>
+                            <p><i class="fas fa-check px-4 text-sm text-green-500"></i>Works on All Devices</p>
+                            <p><i class="fas fa-check px-4 text-sm text-green-500"></i>Connect Anywhere</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center text-center mt-14">
+                        <h1 class="mt-12"><span class="font-bold"> $250 </span>/ mo</h1>
+                        <button
+                            class="border-2 border-sky-700 rounded-3xl px-16 py-2 mt-4 hover:bg-sky-600 hover:text-white">Select</button>
+                    </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div
+                    class="w-full md:w-1/3 h-auto pt-10 px-10 py-10 bg-white border-2 border-gray-300 flex flex-col justify-between items-center rounded-md hover:border-3 hover:border-blue-
+                    transition duration-200 ease-in-out transform md:hover:scale-110 ">
+                    <div class="flex flex-col items-center">
+                        <img src="image/pic.png" alt="Premium Plan Image" class="mb-4">
+                        <h2 class="font-bold">Premium Plan</h2>
+                        <div class="space-y-3 mt-8 text-sky-700">
+                            <p><i class="fas fa-check px-4 text-sm text-green-500"></i>Unlimited Bandwidth</p>
+                            <p><i class="fas fa-check px-4 text-sm text-green-500"></i>Encrypted Connection</p>
+                            <p><i class="fas fa-check px-4 text-sm text-green-500"></i>Yes Traffic Logs</p>
+                            <p><i class="fas fa-check px-4 text-sm text-green-500"></i>Works on All Devices</p>
+                            <p><i class="fas fa-check px-4 text-sm text-green-500"></i>Connect Anywhere</p>
+                            <p><i class="fas fa-check px-4 text-sm text-green-500"></i>Get New Features</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center text-center mt-14">
+                        <h1 class="mt-12"> <span class="font-bold">$999</span> / mo</h1>
+                        <button
+                            class="border-2 border-sky-700 rounded-3xl px-16 py-2 mt-4 hover:bg-sky-600 hover:text-white">Select</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- section 5 -->
+        <div class=" bg-stone-50 h-full  items-center mt-0 auto flex justify-center flex-col " id="network">
+            <h1 class="mt-24 text-4xl text-center leading-normal">Huge Global Network<br> of Net<span
+                    class="font-bold">ONE</span></h1>
+            <p class="text-center  mt-5">See <span class="font-bold">NetONE</span> everywhere to make it easier for you
+                when you move<br> locations.</p>
+
+        </div>
+        <!-- section 6 -->
+        <div class="w-full h-full bg-stone-50 flex items-center justify-center flex-col md:flex-col " >
+            <img src="image/map.png" alt="map" class="w-8/12 mt-16  " id="map">
+        </div>
+
+        <div class="flex flex-wrap justify-center px-4 md:px-20 space-x-4 py-5 bg-stone-50">
+            <div class="w-1/3 md:w-1/5">
+                <img src="image/net.jfif" alt="Image 1" class="w-full h-auto object-cover opacity-20 grayscale">
+            </div>
+            <div class="w-1/3 md:w-1/5">
+                <img src="image/amazon.png" alt="Image 2" class="w-full h-auto object-cover opacity-20  grayscale">
+            </div>
+            <div class="w-1/3 md:w-1/5">
+                <img src="image/discord.png" alt="Image 3" class="w-full h-auto object-cover opacity-20  grayscale">
+            </div>
+            <div class="w-1/3 md:w-1/5">
+                <img src="image/spo.jfif" alt="Image 4" class="w-full h-auto object-cover opacity-20  grayscale">
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- section 7 -->
+
+
+        <div class="flex m-0 auto flex-col justify-center  items-center h-40" id="anim-section7">
+            <h1 class="text-4xl text-center font-bold items-center mt-72">Trusted by Thousands of
+                <br> Happy Customer
+            </h1>
+       
+
+            <p class="text-center py-10 text-sky-700">These are the stories of our customers who have joined us with great
+                <br>pleasure when using this crazy featurs
+            </p>
+     </div>
+     <!-- section 08 -->
+     <div class="mt-72 w-full flex justify-center flex-col items-center h-auto px-4 md:px-10 gap-9 " id="contact">
+        <div class="border-2 border-cyan-600 px-8 py-10 md:px-16 md:py-10 w-full max-w-md mx-auto rounded-3xl">
+            <h1 class="text-cyan-600 text-2xl md:text-3xl font-bold text-center">Contact Us</h1>
+            <p class="text-cyan-600 text-lg md:text-xl text-center">Please fill this form in a decent manner</p>
+            <form class="w-full flex flex-col gap-4">
+                <hr>
+                <input type="text" placeholder="Enter your Name" required class="placeholder-cyan-600 py-4 border-b-2 border-cyan-600 focus:outline-none">
+                <input type="email" placeholder="Enter your Email address" required class="placeholder-cyan-600 py-4 border-b-2 border-cyan-600 focus:outline-none">
+                
+                <label class="text-lg">Message</label>
+                <textarea required class=" rounded-2xl py-4 border-2 border-cyan-600 focus:outline-none"></textarea>
+            </form>
+            <button type="submit" class="border-2 border-cyan-600 px-16 py-4 mt-16 text-cyan-600 mx-auto rounded-full text-2xl hover:bg-cyan-600 hover:text-white hover:text-2xl
+             transition-all duration-400 ease-in-out">Submit</button>
+        </div>
+    </div>
+    
+
+    
+    
+    
+        <!--  section 9 -->
+        <div class="flex flex-col md:flex-row justify-center bg-white mt-40 w-4/6 h-auto md:h-72 gap-9 items-center shadow-2xl
+         shadow-slate-400 mx-auto relative  top-36" id="animlastsection">
+            <div class="w-full md:w-auto ">
+                <input type="text" placeholder="Enter your email"
+                    class="w-full px-4 md:px-24 rounded-md text-lg py-4 border-2 border-slate-950">
+            </div>
+            <div class="w-full md:w-auto">
+                <button
+                    class="w-full md:w-auto px-10 border border-cyan-600 shadow-2xl shadow-slate-400 text-lg text-cyan-600 py-4 rounded-md hover:bg-cyan-600 hover:text-white
+transition-all duration-400 ease-in-out">Subscribe
+                    Now</button>
+            </div>
+        </div>
+        <div class="w-full px-4 sm:px-56  bg-stone-50 flex flex-col md:flex-row gap-10 md:gap-36 py-8" >
+            <div class="text-center md:text-left mt-40  ">
+                <img src="image/logo.png" alt="logo" class="mx-auto md:mx-0">
+                <p class="mt-4">
+                    NetOne is a private virtual network that has
+                    <br> unique features and has high security
+                </p>
+                <!-- Social Media Icons -->
+                <div class="flex justify-center md:justify-start gap-4 mt-4">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com" target="_blank" class="text-blue-600 text-4xl">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+        
+                    <!-- Twitter -->
+                    <a href="https://www.twitter.com" target="_blank" class="text-blue-400 text-4xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+        
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com" target="_blank" class="text-pink-500 text-4xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <p class="mt-4">©2022 NetONE A Product of Piotech Pakistan</p>
+            </div>
+        
+            <div class="flex flex-col md:flex-row justify-between gap-10 md:gap-20 text-center md:text-left mt-40 ">
+                <div>
+                    <ul >
+                        <li  class="font-bold text-2xl">Product</li>
+                        <li class="hover:text-cyan-600">Downloading</li>
+                        <li class="hover:text-cyan-600">Pricing</li>
+                        <li class="hover:text-cyan-600">Location</li>
+                        <li class="hover:text-cyan-600">Server</li>
+                        <li class="hover:text-cyan-600">Countries</li>
+                        <li class="hover:text-cyan-600">Blog</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li class="font-bold text-2xl">Engage</li>
+                        <li class="hover:text-cyan-600">Net ONE ?</li>
+                        <li class="hover:text-cyan-600">FAQ</li>
+                        <li class="hover:text-cyan-600">Tutorials</li>
+                        <li class="hover:text-cyan-600">About Us</li>
+                        <li class="hover:text-cyan-600">Privacy Policy</li>
+                        <li class="hover:text-cyan-600">Terms and Services</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li class="font-bold text-2xl" >Earn Money</li>
+                        <li class="hover:text-cyan-600">Affiliated</li>
+                        <li class="hover:text-cyan-600">Become Partner</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <!-- Script to Toggle Mobile Menu -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script >
+            //animation  navbar
+let tl= gsap.timeline()
+
+tl.from("#pic",{
+    y:-30,
+    opacity:0,
+    duration:1,
+    delay:0,
+
+})
+tl.from("#mymenu",{
+    y:-30,
+    opacity:0,
+    duration:1,
+    stagger: 0,
+
+})
+tl.from("#btn",{
+    y:-30,
+    opacity:0,
+    duration:1,
+    stagger: 0,
+
+}) 
+//section 01 
+tl.from("#anim", {
+    x: -100,   // Left se start hoga (-100 px left)
+    opacity: 0,
+    duration: 0.5,
+    // scale: 0.2,
+});
+tl.from("#imganimation", {
+    x: 100,   // Right se start hoga (100 px right)
+    opacity: 0,
+    duration: 0.5,
+    scale: 1,
+});
+
+// GSAP aur ScrollTrigger plugin ko register karna
+gsap.registerPlugin(ScrollTrigger);
+
+// Animation for #features
+gsap.from("#featur", {
+    y: -30,
+    opacity: 0,
+    scale:0,
+    duration: 1,
+    scrollTrigger: { // Correct spelling
+        trigger: "#featur", // Correct spelling for 'trigger'
+        scroller: "body",
+        markers: false, // 'markers' should be true if you want to see them (Optional)
+        start: "top 60%", // Start point for the animation
+    }
+});
+
+// Animation for #animsection3
+gsap.from("#animsection3", {
+    x: -100,
+    scale:0,
+    duration: 3,
+    delay: 0,
+    scrollTrigger: {
+        trigger: "#animsection3", // Yeh element trigger karega animation ko
+        scroller: "body",     // Scroll container
+        markers: false,       // Markers ko disable karne ke liye
+        start: "top 80%",     // Jab animation start hoga
+    },
+    
+});
+
+gsap.from("#features", {
+    x: 100,
+    scale:0,
+    duration: 3,
+    delay: 0.5,
+    scrollTrigger: {
+        trigger: "#features", // Yeh element trigger karega animation ko
+        scroller: "body",     // Scroll container
+        markers: false,       // Markers ko disable karne ke liye
+        start: "top 80%",     // Jab animation start hoga
+    },
+    
+});
+gsap.from("#pricing", {
+    x: 100,
+    scale:0,
+    duration: 3,
+    delay: 0.5,
+    scrollTrigger: {
+        trigger: "#pricing", // Yeh element trigger karega animation ko
+        scroller: "body",     // Scroll container
+        markers: false,       // Markers ko disable karne ke liye
+        start: "top 150%",     // Jab animation start hoga
+    },
+    
+});
+gsap.from("#network", {
+    x: -100, 
+    opacity: 0,
+    
+    duration: 3,
+    delay: 0.5,
+    scrollTrigger: {
+        trigger: "#network", // Yeh element trigger karega animation ko
+        scroller: "body",     // Scroll container
+        markers: false,       // Markers ko disable karne ke liye
+        start: "top 150%",     // Jab animation start hoga
+    },
+    
+});
+gsap.from("#map", {
+    x: 100,
+    opacity: 0,
+    
+    duration: 3,
+    delay: 0.5,
+    scrollTrigger: {
+        trigger: "#map", // Yeh element trigger karega animation ko
+        scroller: "body",     // Scroll container
+        markers: false,       // Markers ko disable karne ke liye
+        start: "top 150%",     // Jab animation start hoga
+    },
+    
+});
+gsap.from("#anim-section7", {
+    x: -100,
+    opacity: 0,
+   
+    duration: 3,
+    delay: 0.5,
+    scrollTrigger: {
+        trigger: "#anim-section7", // Yeh element trigger karega animation ko
+        scroller: "body",     // Scroll container
+        markers: false,       // Markers ko disable karne ke liye
+        start: "top 150%",     // Jab animation start hoga
+    },
+    
+});
+gsap.from("#contact", {
+    y: 100,
+    opacity: 0,
+     duration: 3,
+    delay: 0.5,
+    scrollTrigger: {
+        trigger: "#contact", // Yeh element trigger karega animation ko
+        scroller: "body",     // Scroll container
+        markers: false,       // Markers ko disable karne ke liye
+        start: "top 150%",     // Jab animation start hoga
+    },
+    
+});
+gsap.from("#animlastsection", {
+    y: 100,
+    opacity: 0,
+   
+    duration: 2,
+    delay: 0.5,
+    scrollTrigger: {
+        trigger: "#animlastsection", // Yeh element trigger karega animation ko
+        scroller: "body",     // Scroll container
+        markers: false,       // Markers ko disable karne ke liye
+        start: "top 150%",     // Jab animation start hoga
+    },
+    
+});
+
+
+
+const sl = gsap.timeline({ paused: true });
+
+// Setup animation for the mobile menu
+sl.from("#mobile-menu", {
+    y:-20,         // Slide down effect
+    opacity: 2,     // Start with opacity 0
+    duration: 0.5,  // 0.5 seconds duration
+});
+</script>   
+<script src="index.js"></script>     
+
+    </div>
+</body>  
+
+</html>
